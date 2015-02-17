@@ -1,0 +1,28 @@
+{
+  "name": "udp-ws",
+  "version": "0.0.1",
+  "description": "simple bridge that relays any message received on UDP to all clients connected with WS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baseio/udp-ws.git"
+  },
+  "keywords": [
+    "udp",
+    "websocket",
+    "bridge"
+  ],
+  "author": "Jørgen Skogmo <js@base.io> (http://base.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baseio/udp-ws/issues"
+  },
+  "homepage": "https://github.com/baseio/udp-ws",
+  "dependencies": {
+    "express": "^4.4.5",
+    "ws": "0.4.x"
+  }
+}
