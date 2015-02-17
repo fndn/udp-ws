@@ -14,7 +14,7 @@ var udp_server 	= null;
 var http_server = null;
 var ws_server 	= null;
 
-var ws_clients  = {};
+var wss_clients = {};
 var wss_counter = 0;
 
 var app 		= express();
@@ -24,7 +24,7 @@ app.use(express.static(__dirname + "/"))
 var udp_server = dgram.createSocket("udp4");
 udp_server.on("message", function (msg, rinfo) {
 	console.log("server got: " + msg + " from " + rinfo.address + ":" + rinfo.port);
-	publish( msg );
+	publish( msg.toString() );
 });
 udp_server.on("listening", function () {
 	var address = udp_server.address();
