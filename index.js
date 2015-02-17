@@ -39,7 +39,7 @@ http_server.listen(ws_port);
 var ws_server = new ws({server: http_server});
 console.log("websocket server publishing on %d", ws_port);
 
-wss.on("connection", function(ws) {
+ws_server.on("connection", function(ws) {
 
 	var msg = "connected to "+ identity + " v."+ version;
 	ws.send( JSON.stringify({'msg':msg}) );
